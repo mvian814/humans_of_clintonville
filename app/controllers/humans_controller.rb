@@ -1,0 +1,10 @@
+class HumansController < ApplicationController
+
+
+
+
+
+
+
+
+end
