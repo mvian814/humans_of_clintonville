@@ -16,49 +16,57 @@
       <li> <a href="The Cats" style="width:20%">The Cats</a></li>
       <div class="clearfix" ></div>
       <div class="clearfix" ></div>
-    </ul>
+  </ul>
 
 
 
-<div class="container">
+  <div class="container">
 
 
-<h1>Clintonville Humans and Their Dogs & Cats</h1>
-<div class="left_side">
-  <% @humans.each do |human| %>
+    <h1>Clintonville Humans and Their Dogs & Cats</h1>
+    <div class="left_side">
+      <% @humans.each do |human| %>
 
-  <%= image_tag "human.jpg", alt: "Default Human Image", height: '150px' %>
-      <p>Human: <%= human.full_name %></p>
-      <p>Address: <%= human.address %></p>
-      <p>Age: <%= human.age %> years old </p>
+      <%= image_tag "human.jpg", alt: "Default Human Image", height: '150px' %>
+          <p>Human: <%= human.full_name %></p>
+          <p>Address: <%= human.address %></p>
+          <p>Age: <%= human.age %> years old </p>
+          <%= human.dogs.each do |dog| %>
+          <%= image_tag "dog.png", alt: "Default Dog Image", height: '100px' %>
+              <p>Name: <%= dog.name %></p>
+              <p>Breed: <%= dog.breed %></p>
+              <p>Weight: <%= dog.weight %> lbs </p>
+              <p>Age: <%= dog.age %> years old</p>
+          <% end %>
 
-    <% end %>
+      <% end %>
+    </div>
 
-</div>
+    <div class="right_side">
 
-
-
-
-
-<div class="right_side">
-
-  <% @dogs.each do |dog| %>
-
-  <%= image_tag "dog.png", alt: "Default Dog Image", height: '100px' %>
-      <p>Name: <%= dog.name %></p>
-      <p>Breed: <%= dog.breed %></p>
-      <p>Weight: <%= dog.weight %> lbs </p>
-      <p>Age: <%= dog.age %> years old</p>
+    </div>
 
 
 
-    <% end %>
 
 
 
-</div>
+      <!-- <% @dogs.each do |dog| %>
+
+      <%= image_tag "dog.png", alt: "Default Dog Image", height: '100px' %>
+          <p>Name: <%= dog.name %></p>
+          <p>Breed: <%= dog.breed %></p>
+          <p>Weight: <%= dog.weight %> lbs </p>
+          <p>Age: <%= dog.age %> years old</p>
 
 
-</div>
+
+        <% end %> -->
+
+
+
+
+
+  </div>
 
 </body>
