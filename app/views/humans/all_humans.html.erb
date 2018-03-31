@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Humans of Clintonville</title>
+      <title>The Humans</title>
         <link rel="stylesheet" href="assets/stylesheets/application.css">
         <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
   </head>
@@ -10,9 +10,9 @@
 
 <body>
   <ul class="navbar">
-      <li> <a href="./" style="width:20%">Home</a> </li>
-      <li> <a href="The Humans" style="width:20%">The Humans</a></li>
-      <li> <a href="./dogs/" style="width:20%">The Dogs</a></li>
+      <li> <a href="index.html.erb" style="width:20%">Home</a> </li>
+      <li> <a href="all_humans.html.erb" style="width:20%">The Humans</a></li>
+      <li> <a href="/dogs/index.html.erb" style="width:20%">The Dogs</a></li>
       <li> <a href="The Cats" style="width:20%">The Cats</a></li>
       <div class="clearfix" ></div>
       <div class="clearfix" ></div>
@@ -23,14 +23,14 @@
 <div class="container">
 
 
-<h1>Clintonville Humans and Their Dogs & Cats</h1>
+<h1>Clintonville Humans</h1>
 <div class="left_side">
   <% @humans.each do |human| %>
 
   <%= image_tag "human.jpg", alt: "Default Human Image", height: '150px' %>
       <p>Human: <%= human.full_name %></p>
       <p>Address: <%= human.address %></p>
-      <p>Age: <%= human.age %> years old </p>
+      <p>Age: <%= human.age %></p>
 
     <% end %>
 
@@ -41,20 +41,6 @@
 
 
 <div class="right_side">
-
-  <% @dogs.each do |dog| %>
-
-  <%= image_tag "dog.png", alt: "Default Dog Image", height: '100px' %>
-      <p>Name: <%= dog.name %></p>
-      <p>Breed: <%= dog.breed %></p>
-      <p>Weight: <%= dog.weight %> lbs </p>
-      <p>Age: <%= dog.age %> years old</p>
-
-
-
-    <% end %>
-
-
 
 </div>
 

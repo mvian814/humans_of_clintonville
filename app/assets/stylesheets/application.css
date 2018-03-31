@@ -13,3 +13,72 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+   background-color: #ccffb3;
+   margin: 0;
+   padding: 0px;
+   background-image: url("stressed-linen.png");
+   font-family: 'Roboto', sans-serif;
+ }
+
+img {
+  border:1px solid #021a40;
+ }
+
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+p {
+  line-height: 1;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+ul {
+  list-style: none;
+  list-style-type: none;
+  background-color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+}
+
+ul li a {
+  text-decoration: none;
+  float: left;
+  padding: 15px;
+  padding-right: 20px;
+  text-transform: uppercase;
+  color: #000000;
+
+}
+
+
+
+.navbar li a:active {
+  color: #000000;
+}
+
+
+ul.navbar li a:hover {
+  color: #ffffff;
+  background-color: #ff9933;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.left_side {
+  float: left;
+  width: 25%;
+  margin-left: 20px;
+}
+
+.right_side {
+  float: right;
+  width: 70%;
+
+}
