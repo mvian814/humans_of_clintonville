@@ -21,7 +21,7 @@
 def create_dog(h)
   h.dogs.destroy_all
 
-  rand(5).times do |i|
+  rand(3).times do |i|
     h.dogs.create!(
     name: Faker::StarTrek.character,
     breed: Faker::Dog.breed,

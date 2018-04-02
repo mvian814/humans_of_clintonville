@@ -14,12 +14,16 @@
  *= require_self
  */
 
- body {
-   background-color: #ccffb3;
-   margin: 0;
-   padding: 0px;
-   background-image: url("stressed-linen.png");
-   font-family: 'Roboto', sans-serif;
+
+
+ @import "bootstrap";
+
+body {
+ background-color: #ccffb3;
+ margin: 0;
+ padding: 0px;
+ background-image: url("stressed-linen.png");
+ font-family: 'Roboto', sans-serif;
  }
 
 img {
@@ -52,13 +56,12 @@ ul li a {
   padding-right: 20px;
   text-transform: uppercase;
   color: #000000;
-
 }
-
 
 
 .navbar li a:active {
   color: #000000;
+
 }
 
 
@@ -71,7 +74,7 @@ ul.navbar li a:hover {
   clear: both;
 }
 
-.left_side {
+/* .left_side {
   float: left;
   width: 25%;
   margin-left: 20px;
@@ -80,5 +83,24 @@ ul.navbar li a:hover {
 .right_side {
   float: right;
   width: 70%;
+} */
 
+
+
+
+
+.big-box,
+.mini-box {
+    color: white;
+    text-align: center;
+    margin: 2px;
+    font-size: 1.5em;
+}
+.big-box {
+    height: 200px;
+    line-height: 65px;
+}
+.mini-box {
+    height: 99px;
+    line-height: 30px;
 }

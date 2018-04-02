@@ -1,19 +1,23 @@
 
+
+
+
 <html>
   <head>
     <meta charset="utf-8">
       <title>Humans of Clintonville</title>
-        <link rel="stylesheet" href="assets/stylesheets/application.css">
+        <!-- <link rel="stylesheet" href="assets/stylesheets/application.css"> -->
+        <%= stylesheet_link_tag "application.css" %>
         <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
   </head>
 
 
 <body>
   <ul class="navbar">
-      <li> <a href="./" style="width:20%">Home</a> </li>
-      <li> <a href="The Humans" style="width:20%">The Humans</a></li>
-      <li> <a href="./dogs/" style="width:20%">The Dogs</a></li>
-      <li> <a href="The Cats" style="width:20%">The Cats</a></li>
+      <li> <a href="./" >Home</a> </li>
+      <li> <a href="The Humans" >The Humans</a></li>
+      <li> <a href="./dogs/" >The Dogs</a></li>
+      <li> <a href="The Cats" >The Cats</a></li>
       <div class="clearfix" ></div>
       <div class="clearfix" ></div>
   </ul>
@@ -24,44 +28,34 @@
 
 
     <h1>Clintonville Humans and Their Dogs & Cats</h1>
-    <div class="left_side">
-      <% @humans.each do |human| %>
 
-      <%= image_tag "human.jpg", alt: "Default Human Image", height: '150px' %>
-          <p>Human: <%= human.full_name %></p>
-          <p>Address: <%= human.address %></p>
-          <p>Age: <%= human.age %> years old </p>
-          <%= human.dogs.each do |dog| %>
-          <%= image_tag "dog.png", alt: "Default Dog Image", height: '100px' %>
-              <p>Name: <%= dog.name %></p>
-              <p>Breed: <%= dog.breed %></p>
-              <p>Weight: <%= dog.weight %> lbs </p>
-              <p>Age: <%= dog.age %> years old</p>
-          <% end %>
+    <div class="row">
+      <div class="col big-box">
+        human
+        <%= image_tag "human.jpg", alt: "Default Human Image", height: '150px' %>
+      </div>
 
-      <% end %>
+      <div class="col">
+        <div class="row">
+          <div class="col mini-box">
+            Dog 1 top left
+            <%= image_tag "dog.png", alt: "Default dog Image", height: '50px' %>
+          </div>
+
+
+          <div class="col mini-box">
+            Dog 2 top right
+            <%= image_tag "dog.png", alt: "Default dog Image", height: '50px' %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mini-box right_side">dog 3 bottom left</div>
+          <div class="col mini-box right_side"> dog 4 bottomright</div>
+        </div>
+      </div>
+
     </div>
 
-    <div class="right_side">
-
-    </div>
-
-
-
-
-
-
-      <!-- <% @dogs.each do |dog| %>
-
-      <%= image_tag "dog.png", alt: "Default Dog Image", height: '100px' %>
-          <p>Name: <%= dog.name %></p>
-          <p>Breed: <%= dog.breed %></p>
-          <p>Weight: <%= dog.weight %> lbs </p>
-          <p>Age: <%= dog.age %> years old</p>
-
-
-
-        <% end %> -->
 
 
 
