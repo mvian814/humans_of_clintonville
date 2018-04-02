@@ -5,7 +5,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Humans of Clintonville</title>
+      <title>Humans & Dogs & Cats</title>
         <!-- <link rel="stylesheet" href="assets/stylesheets/application.css"> -->
         <%= stylesheet_link_tag "application.css" %>
         <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
@@ -33,7 +33,9 @@
     <div class="row">
       <div class="col big-box">
         <%= image_tag "human.jpg", alt: "Default Human Image", height: '150px' %>
-            <p>Human: <%= human.full_name %></p>
+            <h3>Human: <%= human.full_name %></h3>
+            <h3>Address: <%= human.address %></h3>
+            <h3>Age: <%= human.age %> years old </h3>
 
 
       </div>
@@ -42,14 +44,17 @@
         <div class="row">
           <div class="col mini-box">
             <% human.dogs.each do |dog| %>
-            <%= image_tag "dog.png", alt: "Default Dog Image", height: '25px' %>
+            <%= image_tag "dog.png", alt: "Default Dog Image", height: '50px' %>
             <p>Name: <%= dog.name %></p>
+            <p>Breed: <%= dog.breed %></p>
+            <p>Weight: <%= dog.weight %> lbs </p>
+            <p>Age: <%= dog.age %> years old</p>
             <% end %>
           </div>
 
           <div class="col mini-box">
             cat 2 top right
-            <%= image_tag "cat_lick_paw.png", alt: "Default Dog Image", height: '25px' %>
+            <%= image_tag "cat_lick_paw.png", alt: "Default Dog Image", height: '50px' %>
           </div>
         </div>
 
