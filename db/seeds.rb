@@ -18,12 +18,13 @@
 # end
 
 
+
 def create_dog(h)
-  h.dogs.destroy_all
+
 
   rand(3).times do |i|
     h.dogs.create!(
-    name: Faker::StarTrek.character,
+    name: Faker::StarWars.character,
     breed: Faker::Dog.breed,
     weight: Faker::Number.between(5, 160),
     age: Faker::Number.between(1, 16),
@@ -32,6 +33,7 @@ def create_dog(h)
 end
 
 Human.destroy_all
+Dog.destroy_all
 
 5.times do |i|
   h = Human.create!(

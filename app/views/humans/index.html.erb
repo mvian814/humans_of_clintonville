@@ -25,34 +25,47 @@
 
 
   <div class="container">
-
-
     <h1>Clintonville Humans and Their Dogs & Cats</h1>
 
+
     <div class="row">
+      <% @humans.each do |human| %>
+
       <div class="col big-box">
-        human
         <%= image_tag "human.jpg", alt: "Default Human Image", height: '150px' %>
+            <p>Human: <%= human.full_name %></p>
+
+
       </div>
 
       <div class="col">
+
+
+
         <div class="row">
           <div class="col mini-box">
-            Dog 1 top left
-            <%= image_tag "dog.png", alt: "Default dog Image", height: '50px' %>
-          </div>
+            <% human.dogs.each do |dog| %>
+            <%= image_tag "dog.png", alt: "Default Dog Image", height: '25px' %>
+            <p>Name: <%= dog.name %></p>
 
+
+          </div>
 
           <div class="col mini-box">
             Dog 2 top right
-            <%= image_tag "dog.png", alt: "Default dog Image", height: '50px' %>
           </div>
         </div>
         <div class="row">
           <div class="col mini-box right_side">dog 3 bottom left</div>
-          <div class="col mini-box right_side"> dog 4 bottomright</div>
+          <div class="col mini-box right_side">dog 4 br</div>
+          <% end %>
+
         </div>
+
       </div>
+
+
+      <% end %>
 
     </div>
 

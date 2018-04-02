@@ -27,7 +27,7 @@ body {
  }
 
 img {
-  border:1px solid #021a40;
+  border:2px solid #000000;
  }
 
 
@@ -38,7 +38,7 @@ h1 {
 
 p {
   line-height: 1;
-  font-size: 20px;
+  font-size: 12px;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -47,6 +47,7 @@ ul {
   list-style-type: none;
   background-color: #ffffff;
   font-family: 'Roboto', sans-serif;
+
 }
 
 ul li a {
@@ -60,6 +61,8 @@ ul li a {
 
 
 .navbar li a:active {
+  text-decoration: none;
+  list-style: none;
   color: #000000;
 
 }
@@ -91,16 +94,20 @@ ul.navbar li a:hover {
 
 .big-box,
 .mini-box {
-    color: white;
-    text-align: center;
-    margin: 2px;
-    font-size: 1.5em;
+  color: black;
+  text-align: left;
+  border-bottom: 2px solid #ff9933;
+
 }
+
 .big-box {
-    height: 200px;
-    line-height: 65px;
+  height: 300px;
+  border-bottom: 2px solid #ffffff;
+
 }
+
 .mini-box {
-    height: 99px;
-    line-height: 30px;
+  height: 99px;
+  border-right: 2px solid red;
+
 }
