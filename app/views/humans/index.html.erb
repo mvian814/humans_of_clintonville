@@ -28,9 +28,9 @@
     <h1>Clintonville Humans and Their Dogs & Cats</h1>
 
 
-    <div class="row">
-      <% @humans.each do |human| %>
 
+      <% @humans.each do |human| %>
+    <div class="row">
       <div class="col big-box">
         <%= image_tag "human.jpg", alt: "Default Human Image", height: '150px' %>
             <p>Human: <%= human.full_name %></p>
@@ -39,40 +39,28 @@
       </div>
 
       <div class="col">
-
-
-
         <div class="row">
           <div class="col mini-box">
             <% human.dogs.each do |dog| %>
             <%= image_tag "dog.png", alt: "Default Dog Image", height: '25px' %>
             <p>Name: <%= dog.name %></p>
-
-
+            <% end %>
           </div>
 
           <div class="col mini-box">
-            Dog 2 top right
+            cat 2 top right
+            <%= image_tag "cat_lick_paw.png", alt: "Default Dog Image", height: '25px' %>
           </div>
         </div>
-        <div class="row">
-          <div class="col mini-box right_side">dog 3 bottom left</div>
-          <div class="col mini-box right_side">dog 4 br</div>
-          <% end %>
 
-        </div>
 
       </div>
 
 
-      <% end %>
 
     </div>
 
-
-
-
-
+    <% end %>
 
   </div>
 
