@@ -8,6 +8,8 @@ get 'humans' => 'humans#index', as: :humans
 
 get 'dogs' => 'dogs#index', as: :dogs
 
+get 'cats' => 'cats#index', as: :cats
+
 
 
 end
