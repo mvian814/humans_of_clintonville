@@ -1,5 +1,8 @@
 class Human < ApplicationRecord
   has_many :dogs
+  has_many :cats
+
+
 
   def full_name
     "#{first_name} #{last_name}"

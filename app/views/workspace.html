@@ -16,4 +16,10 @@
   <% end %>
 </div>
 
-<%= human.cats.each do |cat| %>
+<% human.cats.each do |cat| %>
+<%= image_tag "cat_lick_paw.png", alt: "Default Cat Image", heigth: '10px' %>
+<p>Name: <%= cat.name %></p>
+<p>Breed: <%= cat.breed %></p>
+<p>Weight: <%= cat.weight %> lbs </p>
+<p>Age: <%= cat.age %> years old</p>
+<% end %>

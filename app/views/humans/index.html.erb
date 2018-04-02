@@ -53,8 +53,13 @@
           </div>
 
           <div class="col mini-box">
-            cat 2 top right
-            <%= image_tag "cat_lick_paw.png", alt: "Default Dog Image", height: '50px' %>
+            <% human.cats.each do |cat|  %>
+            <%= image_tag "cat_lick_paw.png", height: '50px' %>
+            <p>Name:  <%= cat.name %></p>
+            <p>Breed: <%= cat.breed %> </p>
+            <p>Weight: <%= cat.weight %> lbs </p>
+            <p>Age: <%= cat.age %> years old</p>
+            <% end %>
           </div>
         </div>
 

@@ -17,12 +17,20 @@
 #   t.datetime "updated_at", null: false
 # end
 
+def create_cats(h,c)
+  c.times do |i|
+    h.cats.create!(
+    name: Faker::HitchhikersGuideToTheGalaxy.character,
+    breed: Faker::Dog.breed,
+    weight: Faker::Number.between(3, 16),
+    age: Faker::Number.between(1, 16),
+  )
+  end
 
+end
 
-def create_dog(h)
-
-
-  rand(3).times do |i|
+def create_dogs(h,c)
+  c.times do |i|
     h.dogs.create!(
     name: Faker::StarWars.character,
     breed: Faker::Dog.breed,
@@ -34,8 +42,9 @@ end
 
 Human.destroy_all
 Dog.destroy_all
+Cat.destroy_all
 
-5.times do |i|
+10.times do |i|
   h = Human.create!(
 
     first_name: Faker::Name.first_name,
@@ -44,5 +53,12 @@ Dog.destroy_all
     street_name: Faker::Address.street_name,
     birth_year: Faker::Number.between(1938, 2000),
   )
-  create_dog(h)
+
+
+  total_pets = 4
+  total_dogs = rand(total_pets)
+  total_cats = total_pets - total_dogs
+  create_dogs(h,total_dogs)
+  create_cats(h,total_cats)
+
 end
