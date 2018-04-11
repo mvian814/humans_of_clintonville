@@ -10,6 +10,11 @@ get 'dogs' => 'dogs#index', as: :dogs
 
 get 'cats' => 'cats#index', as: :cats
 
+# get 'addpets' => 'pets#add', as: :addpets
+# addpets is the folder in the view and index.html.erb where this fodler is pets ad the file is add.html.erb
+# will need a pets controller with add edit delete dog or cat
+
+
 
 
 end

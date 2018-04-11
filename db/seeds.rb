@@ -21,7 +21,7 @@ def create_cats(h,c)
   c.times do |i|
     h.cats.create!(
     name: Faker::HitchhikersGuideToTheGalaxy.character,
-    breed: Faker::Dog.breed,
+    breed: Faker::Cat.breed,
     weight: Faker::Number.between(3, 16),
     age: Faker::Number.between(1, 16),
   )

@@ -53,7 +53,6 @@ ul {
   list-style-type: none;
   background-color: #ffffff;
   font-family: 'Roboto', sans-serif;
-
 }
 
 ul li a {
@@ -66,13 +65,11 @@ ul li a {
   text-align: center;
 }
 
-
 .navbar li a:active {
   text-decoration: none;
   list-style: none;
   color: #000000;
 }
-
 
 ul.navbar li a:hover {
   color: #ffffff;
@@ -84,7 +81,6 @@ ul.navbar li a:hover {
 }
 
 .left_side {
-
   align-items: center;
 }
 
@@ -92,10 +88,6 @@ ul.navbar li a:hover {
 //   float: right;
 //   width: 70%;
 // } */
-
-
-
-
 
 .big-box,
 .mini-box {
@@ -106,15 +98,13 @@ ul.navbar li a:hover {
 }
 
 .small-box {
-  height: 600px;
+  height: 750px;
   border-bottom: 2px solid #ff9933;
   margin-top: 15px;
   border-right: 2px solid red;
-
 }
 
 .mini-box {
-  height: 600px;
-
+  height: 750px;
 
 }
