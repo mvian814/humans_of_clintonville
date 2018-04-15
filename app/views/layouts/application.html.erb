@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Humans & Dogs & Cats</title>
+    <title>Humans & Pets</title>
       <%= csrf_meta_tags %>
       <!-- <link rel="stylesheet" href="assets/stylesheets/application.css"> -->
       <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
@@ -16,10 +16,19 @@
           <li> <a href="/humans" >The Humans</a></li>
           <li> <a href="/dogs/" >The Dogs</a></li>
           <li> <a href="/cats" >The Cats</a></li>
+          <div class="btn-group">
+            <a href="/humans/new" class="button">Add a Human</a>
+            <a href="/dogs/new" class="button">Add a Dog</a>
+            <a href="/cats/new" class="button">Add a Cat</a>
+          </div>
           <div class="clearfix" ></div>
           <div class="clearfix" ></div>
       </ul>
+
+    <p style="clear:both"></p>
+
       <%= yield %>
+
     </div>
   </body>
 </html>
