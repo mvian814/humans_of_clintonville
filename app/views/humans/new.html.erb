@@ -1,0 +1,19 @@
+
+<h1>A New human</h1>
+
+<%= form_for @human do |form| %>
+<br>
+  <%= form.label :full_name %>
+  <%= form.text_field :full_name %>
+<br>
+  <%= form.label :address %>
+  <%= form.text_field :address %>
+<br>
+  <%= form.label :birth_year %>
+  <%= form.number_field :birth_year %>
+
+
+
+<%= form.submit "Hello!", class: 'btn' %>
+
+<% end %>

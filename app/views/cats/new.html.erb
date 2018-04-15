@@ -1,12 +1,12 @@
-<h1>A New Dog</h1>
+<h1>A New Cat</h1>
 
-<%= form_for @dog do |form| %>
+<%= form_for @cat do |form| %>
 <br>
   <%= form.label :name %>
   <%= form.text_field :name %>
 <br>
-  <%= form.label :breed %>
-  <%= form.select :breed, @breeds %>
+<%= form.label :breed %>
+<%= form.select :breed, @breeds %>
 <br>
   <%= form.label :weight %>
   <%= form.text_field :weight %>
@@ -18,6 +18,6 @@
   <%= form.select :human_id, @humans  %>
 <br>
 
-<%= form.submit "Bark!", class: 'btn' %>
+<%= form.submit "Meow!", class: 'btn' %>
 
 <% end %>

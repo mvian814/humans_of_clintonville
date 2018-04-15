@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   root 'humans#index'
 
   get '/humans' => 'humans#index', as: :humans
-
+  get '/humans/new'=> 'humans#new', as: :new_human
+  post '/humans' => 'humans#create', as: :create_humans
 
   get '/dogs' => 'dogs#index', as: :dogs
   get '/dogs/new' => 'dogs#new', as: :new_dog
@@ -12,6 +13,8 @@ Rails.application.routes.draw do
 
 
   get '/cats' => 'cats#index', as: :cats
+  get '/cats/new' => 'cats@new', as: :new_cat
+  post '/cats' => 'cats#create', as: :create_cats
 
 
 

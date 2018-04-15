@@ -1,1 +1,12 @@
-<h1>the cats page</h1>
+<h1>The Cats of Clintonville</h1>
+<% @cats.each do |cat| %>
+
+<%= image_tag "cat_lick_paw.png", alt: "Default cat Image", height: '100px' %>
+    <p>Name: <%= cat.name %></p>
+    <p>Breed: <%= cat.breed %></p>
+    <p>Weight: <%= cat.weight %> lbs </p>
+    <p>Age: <%= cat.age %> years old</p>
+
+
+
+  <% end %>
