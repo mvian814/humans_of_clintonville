@@ -1,6 +1,5 @@
 class HumansController < ApplicationController
 
-
   def index
     @humans = Human.all
     @dogs = Dog.all
@@ -11,7 +10,7 @@ class HumansController < ApplicationController
   end
 
   def create
-    @human = Human.create(human_params)
+    @human = Human.new(human_params)
     if @human.save
       redirect_to humans_path
     else
@@ -19,16 +18,10 @@ class HumansController < ApplicationController
     end
   end
 
-
-
-
   private
 
   def human_params
-    params.require(:human).permit([:full_name, :address,:age])
-
+    params.require(:human).permit([:birth_year, :first_name, :last_name, :address_numbers, :street_name])
   end
-
-
 
 end

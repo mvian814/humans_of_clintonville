@@ -18,6 +18,7 @@
 # end
 
 def create_cats(h,c)
+  puts "creating cats"
   c.times do |i|
     h.cats.create!(
     name: Faker::HitchhikersGuideToTheGalaxy.character,
@@ -30,6 +31,7 @@ def create_cats(h,c)
 end
 
 def create_dogs(h,c)
+  puts "creating dogs"
   c.times do |i|
     h.dogs.create!(
     name: Faker::StarWars.character,
@@ -44,6 +46,7 @@ Human.destroy_all
 Dog.destroy_all
 Cat.destroy_all
 
+puts "creating humans"
 10.times do |i|
   h = Human.create!(
 
