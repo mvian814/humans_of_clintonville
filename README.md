@@ -1,5 +1,5 @@
 # README
-
+4/30/18
 This was one of the first web apps that I made outside of my bootcamp class. Building off of my original Dogs of Clintonville App, my goals for Humans of Clintonville was to get some experience with associations and to work on my html and css.  The app features a list of Humans with a list of their dogs and cats.  Most of the data is generated using Faker gems.
 
 One of the first issues I encountered with this app was generating migrations.  Rails took my Human model and pluralized it as Humen.  After some research I found that I needed to define an irregular inflection in my initializer file.  
