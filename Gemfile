@@ -58,3 +58,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'faker', '~> 1.8.7'
 gem 'bootstrap', '~> 4.0.0'
 gem 'httparty'
+
+
+
+group :production do
+  gem 'pg'
+end
+
+ruby "2.4.1"
